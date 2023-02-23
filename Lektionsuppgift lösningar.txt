@@ -1,0 +1,25 @@
+a) 
+   Program Memory Usage 	:	196 bytes   0,6 % Full
+   Data Memory Usage 		:	0 bytes   0,0 % Full
+
+Här hade vi inline-funktioner, så inga funktionsanrop skedde.
+Kompilatorn optimerade koden och lade allt inline, liknande kod som
+vi kör när vi använder makron med mera.
+
+b)
+
+   Program Memory Usage 	:	320 bytes   1,0 % Full
+   Data Memory Usage 		:	0 bytes   0,0 % Full
+
+Inga inline-funktioner, så funktionsanrop sker med pekare.
+
+c)
+   Program Memory Usage 	:	380 bytes   1,2 % Full
+   Data Memory Usage 		:	6 bytes   0,3 % Full
+
+Pin-numren utgörs av statiska konstanter. Nu blev det mer pekare och därmed mer kod
+än när pin-numren skickades direkt. Dessutom tar konstanterna plats i dataminnet (6 byte).
+
+d)
+   Program Memory Usage 	:	406 bytes   1,2 % Full
+   Data Memory Usage 		:	0 bytes   0,0 % Full
